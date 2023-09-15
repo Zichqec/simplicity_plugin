@@ -1,0 +1,4 @@
+charset,UTF-8
+type,plugin
+name,Simplicity Plugin
+directory,simplicity_plugin_zi

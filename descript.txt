@@ -1,0 +1,11 @@
+Charset,UTF-8
+type,plugin
+filename,yaya.dll
+
+name,Simplicity Plugin
+id,c9134f40-5013-11ed-af6f-0800200c9a66
+craftman,
+craftmanurl,
+homeurl,
+
+//The ID MUST BE UNIQUE. You can use either this site https://www.famkruithof.net/uuid/uuidgen or this tool http://ssp.shillest.net/docs/guid.zip to generate a unique one for your plugin. **YOU MUST DO THIS FOR EACH PLUGIN YOU MAKE.** Do it immediately, don't wait. And do not change it after you've set it.

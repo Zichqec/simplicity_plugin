@@ -1,0 +1,23 @@
+charset.dic, UTF-8
+charset.output, UTF-8
+charset.file, UTF-8
+charset.save, UTF-8
+charset.extension, UTF-8
+
+msglang,english
+
+
+dic, yaya_plugin2.dic
+dic, main.dic
+
+
+//Logging commands, use if you need them.
+//You can use Tama with plugins made with YAYA if you open Tama without hooking it to a specific ghost, then unload and reload your plugin! If you only run one ghost at a time, you may need to use the original version of Tama for this.
+//log, _plugin.log	
+//iolog, on
+//ignoreiolog, ID: OnSecondChange //Ignore OnSecondChange
+
+
+//Save file encryption. If you turn this on, the variable file will be encrypted (though it's not particularly strong encryption).
+//Note that if you turn it on, it will always be encrypted even if you turn it back off, unless you delete the save file.
+//save.encode,on

@@ -1,0 +1,57 @@
+//Happens when the plugin loads
+PluginLoad
+{
+	ExampleToggle = "On"
+}
+
+//Happens when the plugin unloads
+PluginUnload
+{
+	ERASEVAR("ExampleToggle")
+}
+
+//This function is called when the user clicks on the plugin through the right click menu
+OnMenuExec : all
+{
+	res_marker = version
+	
+	"\0\_q\*\b[2]Hello, world!\n\n"
+	
+	"\![*]\__q[OnExampleEvent,%(hour12ex),%(minute)]Send a test event to all open ghosts\__q\n\n"
+	
+	"\![*]Example toggle (does nothing): \__q[OnExampleToggle]%(ExampleToggle)\__q\n\n"
+	
+	"\![*]\q[Close menu,OnClose]"
+}
+
+OnExampleEvent
+{
+	res_event = "OnSimplicityPlugin.ExampleEvent"
+	res_target = "__SYSTEM_ALL_GHOST__"
+	res_marker = version
+	
+	_hour = reference[0]
+	_minute = reference[1]
+	if TOINT(reference[1]) <= 9; _minute = "0" + _minute
+	
+	"It's %(_hour):%(_minute)!\nSimplicity Plugin, running on %(LICENSE[0])"
+}
+
+OnExampleToggle
+{
+	if ExampleToggle == "On"; ExampleToggle = "Off"
+	else; ExampleToggle = "On"
+	
+	"\![raiseplugin,Simplicity Plugin,OnMenuExec]"
+}
+
+OnClose
+{
+	"\e"
+}
+
+//Display name and version of the plugin in the balloon's SSTP text
+version
+{
+	"Simplicity Plugin v1.0.0"
+}
